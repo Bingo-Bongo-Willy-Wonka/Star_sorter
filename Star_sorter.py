@@ -46,8 +46,6 @@ for i in range (1, len(Spisok_strok) - 1):
     Filters.append(a[2])
     Magns.append(a[3])
 
-print("\nЗвезды: ", set(Names))
-
 for i in range(0, len(Filters)):              #чистилка от \n и пробелов
     Filters[i] = Filters[i].replace(" ", "")
     Filters[i] = Filters[i].replace("\n", "")
@@ -56,7 +54,7 @@ for i in range(0, len(Magns)):              #чистилка от \n и про�
     Magns[i] = Magns[i].replace(" ", "")
     Magns[i] = Magns[i].replace("\n", "")
 
-
+print("Звезды:", set(Names))
 print("Фильтры:", set(Filters))
 
 Needed_stars = input("\nВведите имя звезды:")
@@ -69,7 +67,7 @@ while One_of_filters != "":
         Needed_filters.append(One_of_filters)
 
 Data_of_HJD = []
-Data_of_magn = [] #[[0,0]]
+Data_of_magn = []
 for i in range(0, len(Names)):
     if Needed_stars == Names[i]:
         for k in range(0, len(Needed_filters)):
